@@ -85,7 +85,7 @@ h1 {
     display: flex;
     align-content: center;
     justify-content: center;
-    width: 75rem;
+    width: 70%;
     margin-top: 0rem;
     position: relative;
     animation: mymove 5s normal;
