@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+
+        <link rel="stylesheet" href="./CSS/Projects.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   
+
+        
+        <style>
+            body{overflow-y: visible;}
+
+
+            h1 {
+                text-align: center;
+            }
+
+            button {
+                width:120px;
+                align-self: center;
+                background-color: #ffa8c1;
+                color: black;
+                border: none;
+                border-radius: 10px;
+                height: 30px;
+                cursor: pointer;
+            }
+            a {align-self: center; }
+            a:hover {position: relative; bottom: 3px;}
+            p {
+                text-align: left; 
+                padding-top: 1.5rem;
+                padding-bottom: 2rem;
+                margin: 0 5rem;
+            }
+            
+
+
+              /* SLIDER FRAME */
+            
+            .carousel {
+            margin-left: 10rem;
+            margin-right: 10rem;
+            margin-top: 2rem;
+            }
+
+            ul.slides {
+            display: block;
+            position: relative;
+            height: 30rem;
+            width: 60rem;
+            margin: 0;
+            overflow: hidden;
+            list-style: none;
+            align-content: center;
+            }
+
+            .slides * {
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            }
+
+            ul.slides input {
+            display: none;
+            }
+
+
+            .slide-container {
+            display: block;
+            }
+
+            .slide-image {
+            display: block;
+            position: absolute;
+            height: 30rem;
+            width: 50rem;
+            top: 0;
+            opacity: 0;
+            transition: all .7s ease-in-out;
+            align-self: center;
+            }
+
+            .slide-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px !important;
+            
+            }
+
+            .carousel-controls {
+            position: absolute;
+            top: 4rem;
+            left: -10px;
+            right: 130px;
+            z-index: 999;
+            font-size: 100px;
+            line-height: 300px;
+            color: white;
+            }
+
+            .carousel-controls label {
+            display: none;
+            position: absolute;
+            padding: 0 20px;
+            opacity: 0;
+            transition: opacity .2s;
+            cursor: pointer;
+            }
+
+            .slide-image:hover + .carousel-controls label{
+            opacity: 0.5;
+            }
+
+            .carousel-controls label:hover {
+            opacity: 1;
+            }
+
+            .carousel-controls .prev-slide {
+            width: 49%;
+            text-align: left;
+            left: 0;
+            }
+
+            .carousel-controls .next-slide {
+            width: 49%;
+            text-align: right;
+            right: 0;
+            }
+
+            .carousel-dots {
+            position: absolute;
+            left: 0;
+            right: 130px;
+            bottom: -10px;
+            z-index: 999;
+            text-align: center;
+            }
+
+            .carousel-dots .carousel-dot {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0.5;
+            margin: 10px;
+            }
+
+            input:checked + .slide-container .slide-image {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 1s ease-in-out;
+            }
+
+            input:checked + .slide-container .carousel-controls label {
+            display: block;
+            }
+
+            input#img-1:checked ~ .carousel-dots label#img-dot-1,
+            input#img-2:checked ~ .carousel-dots label#img-dot-2,
+            input#img-3:checked ~ .carousel-dots label#img-dot-3,
+            input#img-4:checked ~ .carousel-dots label#img-dot-4,
+            input#img-5:checked ~ .carousel-dots label#img-dot-5,
+            input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+            opacity: 1;
+            }
+
+            input:checked + .slide-container .nav label { display: block; }
+
+            .sk_frame {
+                height: 70rem;
+                width: 30rem;
+                padding: 0 1rem;
+            }
+            .sk_frame img {
+                height: 100%;
+                width: 100%;
+            }
+            .sk {
+                margin: 2rem 2rem 0 2rem;
+                display: flex; 
+                justify-content: center;
+            }
+
+            .lite_frame {
+                height: 30rem;
+                width: 50rem;
+                padding: 1rem 0;
+            }
+            .lite_frame img {
+                height: 100%;
+                width: 100%;
+                border-radius: 25px;
+            }
+            .lite {
+                margin: 2rem 2rem 0 2rem;
+                display: flex; 
+                flex-direction: column;
+                align-self: center;
+            }
+
+        </style>
+   
+   
+   
+    </head>
+
+
+    <body>
+
+        <h1>Sample WordPess Sites</h1>
+
+            <div>
+                <div class="carousel">
+                <ul class="slides">
+                    <input type="radio" name="radio-buttons" id="img-1" checked />
+                    <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/lps1">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-3" class="prev-slide">
+                        <span>‹</span>
+                        </label>
+                        <label for="img-2" class="next-slide">
+                        <span>›</span>
+                        </label>
+                    </div>
+                    </li>
+                    
+                    <input type="radio" name="radio-buttons" id="img-2" />
+                    <li class="slide-container">
+                    <div class="slide-image">
+                        <img src="./Images/lps2">
+                    </div>
+                    <div class="carousel-controls">
+                        <label for="img-1" class="prev-slide">
+                        <span>‹</span>
+                        </label>
+                        <label for="img-3" class="next-slide">
+                        <span>›</span>
+                        </label>
+                    </div>
+                    </li>
+                    
+                    <div class="carousel-dots">
+                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                    </div>
+
+                </ul>
+                </div>
+
+                <p style="text-align: center;"><strong>Description:</strong>&nbsp; A school website integrated with a third-party Learning Management System (LMS).</p>
+            </div>
+
+
+            <div class="sk">
+                <div class="sk_frame">
+                    <img src="./Images/sk.jpeg"/>
+                </div>
+                <div class="sk_frame">
+                    <img src="./Images/sk2.jpeg"/>
+                </div>
+            </div>
+            <p><strong>Description:</strong>&nbsp; Worked with a distributed team across India and Europe to design this beautiful Indian bridal fashion website. Learnt the name of some fabrics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and different traditional attires 😅.</p>
+
+
+
+            <div class="lite">
+                <div class="lite_frame">
+                    <img src="./Images/lite (1).JPG"/>
+                </div>
+                <div class="lite_frame">
+                    <img src="./Images/lite2"/>
+                </div>
+            </div>
+            <p><strong>Description:</strong> An e-learning website to expand the client-base of the company by offering online courses globally, as opposed to only in-house trainings. <br> <strong>P.S.</strong> This was my first shot at WordPress.</p>
+
+ 
+        <br>
+        <a href="projects.html"><button>Project Page ↩</button></a>
+        <br>
+
+        <footer style= "text-align:center; font-size: 10px; color: black;">Designed with 🤍 by <strong><a href="#" style="text-decoration: none; color: black;">IBK</a></strong> </footer>
+
+    </body>
+
+</html>

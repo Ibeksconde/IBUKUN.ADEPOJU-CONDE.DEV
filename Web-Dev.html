@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+
+        <link rel="stylesheet" href="./CSS/Projects.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   
+
+        
+        <style>
+            body {overflow-y: visible;}
+            h1 {
+                text-align: center;
+            }
+
+            button {
+                width:120px;
+                align-self: center;
+                background-color: #ffa8c1;
+                color: black;
+                border: none;
+                border-radius: 10px;
+                height: 30px;
+                cursor: pointer;
+            }
+            a {align-self: center; }
+            a:hover {position: relative; bottom: 3px;}
+
+            p {
+                text-align: center; 
+                padding-top: 1.5rem;
+                padding-bottom: 2rem;
+                margin: 0 5rem;
+                font-size: 20px;
+            }
+
+
+            
+            .frame1 {
+                height: 40rem;
+                width: 50rem;
+                padding: 0 1rem;
+            }
+            .frame1 img {
+                height: 100%;
+                width: 100%;
+                border-radius: 25px;
+            }
+            .frame2 {
+                height: 70rem;
+                width: 40rem;
+                padding: 0 1rem;
+            }
+            .frame2 img {
+                height: 100%;
+                width: 100%;
+                border-radius: 25px;
+            }
+            .frame3 {
+                height: 35rem;
+                width: 70rem;
+                margin: 2rem 0;
+            }
+            .frame3 img {
+                height: 100%;
+                width: 100%;
+                border-radius: 25px;
+            
+            }
+            
+            .row1 {
+                margin: 2rem .1rem 0 .1rem;
+                display: flex; 
+                justify-content: center;
+            }
+            .row2 {
+                margin: 2rem 2rem 0 2rem;
+                display: flex; 
+                justify-content: center;
+            }
+            .row3 {
+                margin: 2rem;
+                display: flex; 
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @media screen and (max-width: 800px) {
+                .row3 {
+                    width: 80%; /* The width is 100%, when the viewport is 800px or smaller */
+                }
+            }
+
+        </style>
+   
+   
+   
+    </head>
+
+
+    <body>
+
+        <h1>Sample HTML & CSS Sites</h1>
+
+        <div class="row1">
+            <div class="frame1">
+                <img src="./Images/ecom1.jpeg"/>
+            </div>
+            <div class="frame1">
+                <img src="./Images/ecom2.jpeg"/>
+            </div>
+        </div>
+        <p><strong>Description:</strong>&nbsp; Replicated this beautiful e-commerce theme available online, using <strong>Flexbox.</strong></p>
+
+
+        <div class="row2">
+            <div class="frame2">
+                <img src="./Images/express1.jpeg"/>
+            </div>
+            <div class="frame2">
+                <img src="./Images/express2.jpeg"/>
+            </div>
+        </div>
+        <p><strong>Description:</strong>&nbsp; Replicated this business theme available online, using <strong>Bootstrap.</strong></p>
+
+        
+        <div class="row3">
+            <div class="frame3">
+                <img src="./Images/portfolio1.JPG"/>
+            </div>
+            <div class="frame3">
+                <img src="./Images/portfolio2.JPG"/>
+            </div>
+        </div>
+        <p><strong>Description:</strong>&nbsp; Designed this using only <strong>HTML & CSS.</strong></p>
+
+
+
+
+        <br>
+        <a href="projects.html"><button>Project Page ↩</button></a>
+        <br>
+
+        <footer style= "text-align:center; font-size: 10px; color: black;">Designed with 🤍 by <strong><a href="#" style="text-decoration: none; color: black;">IBK</a></strong> </footer>
+
+    </body>
+
+</html>
