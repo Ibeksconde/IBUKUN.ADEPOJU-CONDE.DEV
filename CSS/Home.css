@@ -91,6 +91,9 @@ h1 {
     animation: mymove 5s normal;
     animation-timing-function: ease-in-out;
     cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
   }
   
   button{
@@ -157,7 +160,7 @@ h1 {
     /* icons area */
     .icons {
         text-align: right;
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
 
     .icons img {
